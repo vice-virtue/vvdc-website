@@ -1,0 +1,35 @@
+<section class="section--community-orgs">
+	<div class="wrapper">
+		<h2 class="header">{{ site.communityOrgHeader }}</h2>
+		<ul class="">
+			{%- assign orgs = collections.community-orgs %} {%- for post in orgs
+			%}
+			<li class="community-org two-col-grid">
+				<!-- Team community-org Name & Social Media -->
+				<div>
+					<h3 class="community-org__name">{{ post.data.title }}</h3>
+					<div class="">
+						{{ post.data.body }}
+					</div>
+					<a
+						class="button button__primary"
+						href="{{ post.data.url }}"
+						>{{ post.data.urlLabel }}</a
+					>
+				</div>
+				<!-- Team community-org Headshot -->
+				<figure class="community-org__photo">
+					<img
+						src="{{ post.data.logo }}"
+						class="community-org__logo"
+					/>
+					<img
+						src="{{ post.data.avatar }}"
+						alt="{{ post.data.avatarAlt }}"
+					/>
+				</figure>
+			</li>
+			{%- endfor -%}
+		</ul>
+	</div>
+</section>

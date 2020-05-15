@@ -1,0 +1,5 @@
+{
+	"changeFreq": "monthly",
+	"layout": "page",
+	"permalink": "/{{title | slug}}/"
+}

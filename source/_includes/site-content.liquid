@@ -1,0 +1,11 @@
+<main class="site-content">
+	{% if layout == "home" %}
+	{{ content }}
+	{% elsif layout == "page" %}
+	<article class="full-bleed">
+		<div class="wrapper wrapper--page">
+			{{ content }}
+		</div>
+	</article>
+	{% endif %}
+</main>

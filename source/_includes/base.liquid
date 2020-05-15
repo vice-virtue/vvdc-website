@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- Theme Color for Chrome, Firefox OS and Opera -->
+		<meta name="theme-color" content="#4285f4" />
+		<!-- Short description of the document (limit to 150 characters) -->
+		<!-- This content *may* be used as a part of search engine results. -->
+		<meta name="description" content="A description of the page" />
+		<!-- Control the behavior of search engine crawling and indexing -->
+		<meta name="robots" content="index,follow" />
+		<!-- All Search Engines -->
+		<meta name="googlebot" content="index,follow" />
+		<!-- Google Specific -->
+		<!-- Tells Google not to show the sitelinks search box -->
+		<meta name="google" content="nositelinkssearchbox" />
+		<!-- Tells Google not to provide a translation for this document -->
+		<meta name="google" content="notranslate" />
+		<!-- Disable automatic detection and formatting of possible phone numbers -->
+		<meta name="format-detection" content="telephone=no" />
+		<title>{{ title }} / {{ site.title }}</title>
+		<!-- styles -->
+		<link
+			href="/assets/styles/app.css"
+			media="all"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<link rel="stylesheet" href="https://use.typekit.net/ztw7kqz.css" />
+		<script
+			src="https://kit.fontawesome.com/9b37c97180.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+
+	<body class="layout-{{ layout }}">
+		{% include component/header %}
+		<main id="main-content" role="main" class="site-content">
+			{{ content }}
+		</main>
+		{% include component/footer %}
+	</body>
+</html>
