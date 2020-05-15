@@ -1,0 +1,45 @@
+<section>
+	<div class="wrapper">
+		<div class="two-col-grid">
+			<div class="embed embed__eventbrite">
+				<h2>Upcoming Events</h2>
+				<div id="eventbrite-widget-container-92496416271"></div>
+
+				<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+
+				<script type="text/javascript">
+					var exampleCallback = function () {
+						console.log("Order complete!");
+					};
+
+					window.EBWidgets.createWidget({
+						// Required
+						widgetType: "checkout",
+						eventId: "92496416271",
+						iframeContainerId:
+							"eventbrite-widget-container-92496416271",
+
+						// Optional
+						iframeContainerHeight: 640, // Widget height in pixels. Defaults to a minimum of 425px if not provided
+						onOrderComplete: exampleCallback, // Method called when an order has successfully completed
+					});
+				</script>
+			</div>
+			<div class="embed embed__twitter">
+				<h2>Latest Tweets</h2>
+				<a
+					class="twitter-timeline"
+					data-height="640"
+					data-dnt="true"
+					data-theme="light"
+					href="https://twitter.com/washvicevirtue?ref_src=twsrc%5Etfw"
+				></a>
+				<script
+					async
+					src="https://platform.twitter.com/widgets.js"
+					charset="utf-8"
+				></script>
+			</div>
+		</div>
+	</div>
+</section>

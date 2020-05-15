@@ -1,0 +1,31 @@
+{
+	"name": "www.washvicevirtue.com",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"clean": "rm -rf build",
+		"css": "node sass.js",
+		"lint-language": "alex ./source/",
+		"serve": "npm run clean && npm run css && npm run lint-language && npx eleventy --serve",
+		"build": "npm run clean && npm run css && npm run lint-language && npx eleventy"
+	},
+	"devDependencies": {
+		"@11ty/eleventy": "^0.10.0",
+		"@11ty/eleventy-navigation": "^0.1.5",
+		"@11ty/eleventy-plugin-rss": "^1.0.7",
+		"alex": "^8.1.1",
+		"sass": "^1.26.5"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://gitlab.com/washington-vice-virtue/www.washvicevirtue.com.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://gitlab.com/washington-vice-virtue/www.washvicevirtue.com/issues"
+	},
+	"homepage": "https://gitlab.com/washington-vice-virtue/www.washvicevirtue.com#readme"
+}

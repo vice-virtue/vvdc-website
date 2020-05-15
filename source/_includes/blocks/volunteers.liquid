@@ -1,0 +1,59 @@
+<section class="section--volunteers">
+	<div class="wrapper">
+		<h2>Volunteers</h2>
+		<ul class="auto-grid listing">
+			{%- for post in collections.volunteers -%}
+			<li class="individual">
+				<figure class="noise">
+					<img
+						class="avatar"
+						src="{{ post.data.avatar }}"
+						alt="{{ post.data.avatarAlt }}"
+					/>
+				</figure>
+
+				<div class="content">
+					<h3 class="name">{{ post.data.title }}</h3>
+					<ul class="social-links">
+						{% if post.data.linkedinURL %}
+						<li>
+							<a
+								class="social-link"
+								target="_blank"
+								rel="noopener"
+								href="{{ post.data.linkedinURL }}"
+								><i class="fab fa-linkedin"></i
+							></a>
+						</li>
+						{% endif %} {% if post.data.twitterURL %}
+						<li>
+							<a
+								class="social-link"
+								target="_blank"
+								rel="noopener"
+								href="{{ post.data.twitterURL }}"
+								><i class="fab fa-twitter-square"></i
+							></a>
+						</li>
+						{% endif %} {% if post.data.instagramURL %}
+						<li>
+							<a
+								class="social-link"
+								target="_blank"
+								rel="noopener"
+								href="{{ post.data.instagramURL }}"
+								><i class="fab fa-instagram"></i
+							></a>
+						</li>
+						{% endif %}
+					</ul>
+				</div>
+
+				<div class="wysiwyg">
+					{{ post.data.bio }}
+				</div>
+			</li>
+			{%- endfor %}
+		</ul>
+	</div>
+</section>
